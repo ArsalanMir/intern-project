@@ -51,6 +51,11 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
+app.get("/", (req, res)=>{
+
+ res.send("every thing is okay");
+});
+
 // Start Server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
