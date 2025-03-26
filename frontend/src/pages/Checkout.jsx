@@ -24,7 +24,7 @@ const Checkout = () => {
     };
 
     try {
-      const response = await fetch("https://intern-project-d7j5.onrender.com/send-email", {
+      const response = await fetch("https://intern-project-d7j5.onrender.com/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(orderData),
@@ -34,7 +34,9 @@ const Checkout = () => {
       if (result.success) {
         alert("Order placed successfully! Admin has been notified.");
         clearCart();
+        
         navigate("/");
+
       } else {
         alert("Failed to place order. Please try again.");
       }

@@ -15,7 +15,7 @@ app.use(express.json());
 
 
 // Email Sending Route
-app.post("/send-email", async (req, res) => {
+app.post("/send", async (req, res) => {
   try {
     const { name, address, phone, cart, totalAmount } = req.body;
 
